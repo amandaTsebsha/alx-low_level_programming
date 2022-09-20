@@ -5,10 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "address": "TCP/IP address of process to be debugged",
+            "localRoot": "${workspaceFolder}",
+            "name": "Attach to Remote",
+            "port": 9229,
+            "remoteRoot": "Absolute path to the remote directory containing the program",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "name": "(gdb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",,
+            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            ,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -17,12 +38,11 @@
                     "ignoreFailures": true
                 },
                 {
-                    "description":  "Set Disassembly Flavor to Intel",
+                    "description": "Set Disassembly Flavor to Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
                 }
             ]
         }
-
     ]
 }
