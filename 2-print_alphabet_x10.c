@@ -1,17 +1,24 @@
+// Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
+
+
 #include <stdio.h>
 
 int main(){
 
-    int i = 0;
-    char alpha = 'a';
-    while(i < 10){
+    int i;
+    for(i = 0; i < 10; i++){
 
-        while(alpha < 'z'){
+        char alpha = 'a';
+        while(alpha < 'z'){  
+
+            
             putchar(alpha);
             alpha++;
-        }
-        putchar(alpha)
-        i++;
+            
+        }   
+        putchar(alpha);
+        printf("\n");
+        
 
     }
 

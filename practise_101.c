@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-int main(){
+//PRACTISE FILE 
+// 
 
-// Decclare variable
+int main(){
+// Declare variable
     int num = 15;
 
 
